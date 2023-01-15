@@ -27,29 +27,35 @@ php artisan vendor:publish --provider="OscarOl\LaravelAppVersioning\LaravelAppVe
 
 ### Increment the version
 ```php
-php artisan version:increment-major
-php artisan version:increment-minor
-php artisan version:increment-patch
-php artisan version:increment-pre-release
+php artisan version:increment-major         // v1.2.3 -> v2.0.0
+php artisan version:increment-minor         // v1.2.3 -> v1.3.0
+php artisan version:increment-patch         // v1.2.3 -> v1.2.4
+php artisan version:increment-pre-release   // v1.2.3-alpha.5 -> v1.2.4-alpha.6
 ```
 ### Set (override) the version or individual values
 ```php
-php artisan version:set 1.2.3
-php artisan version:major 2
-php artisan version:minor 3
-php artisan version:patch 4
-php artisan version:pre-release alpha.1
-php artisan version:build 123
+php artisan version:set 1.2.3               // v1.2.3
+php artisan version:major 2                 // v1.2.3 -> v2.0.0
+php artisan version:minor 3                 // v1.2.3 -> v1.3.0
+php artisan version:patch 4                 // v1.2.3 -> v1.2.4
+php artisan version:pre-release alpha.1     // v1.2.3 -> v1.2.3-alpha.1
+php artisan version:build 123               // v1.2.3 -> v1.2.3+123
 ```
 
 ### Show the version
 ```php
-php artisan version:show
+php artisan version:show                    // v1.2.3
 ```
 
 ### Get the Version class inside your code
 ```php
-Illuminate\Support\Facades\App::make('version'); // returns an instance of PHLAK\SemVer\Version with the current version
+// it returns an instance of PHLAK\SemVer\Version with the current version
+Illuminate\Support\Facades\App::make('version');
+// or
+app()->make('version');
+
+// Print the version
+echo app()->make('version')->__toString();  // 1.2.3
 ```
 
 ### Changelog
