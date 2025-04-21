@@ -17,13 +17,13 @@
     ],
     "require": {
         "php": "^8.2",
-        "illuminate/support": "^11.0",
-        "phlak/semver": "^4.1"
+        "illuminate/support": "^9.52.16|^10.0|^11.0|^12.0",
+        "phlak/semver": "^6.1"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.15",
-        "orchestra/testbench": "^9.0",
-        "phpunit/phpunit": "^11.0"
+        "friendsofphp/php-cs-fixer": "^3.13",
+        "orchestra/testbench": "^7.0|^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^9.0|^10.0|^11.0|^12.0"
     },
     "autoload": {
         "psr-4": {
